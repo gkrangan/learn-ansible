@@ -1,0 +1,10 @@
+---
+- name: This is a test Ansible Playbook
+  hosts: servers
+  become: True
+  tasks:
+     - name: Install Git
+       apt: name=git
+    
+     - name: Copy Hello to Home folder
+       copy: src=hello.txt dest=/home/vagrant mode=0444
